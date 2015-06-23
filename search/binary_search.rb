@@ -15,7 +15,7 @@ def binary_search min, primes, max, guess, n
   count = 0
   if guess == n 
     puts "you guessed right!"
-    puts "it took you 1 guess to find the prime!"
+    puts "it took 1 guess to find the prime!"
   else
     until guess == n do
         if guess > n
@@ -32,7 +32,7 @@ def binary_search min, primes, max, guess, n
           break
       end
     end
-      puts "it took you " + count.to_s + " guesses to find the prime at index " + primes.index(guess).to_s
+      puts "it took " + count.to_s + " guesses to find the prime at index " + primes.index(guess).to_s
   end
 end
 
