@@ -6,9 +6,10 @@ program is run.
 min = 0
 primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
 n = primes.sample #random element from array
-max = n
-guess = (max + min) / 2
+max = primes.length - 1
+guess = primes.sample
 puts "selected prime is " + n.to_s
+puts "the first guess is " + guess.to_s
 
 def binary_search min, primes, max, guess, n
   count = 0
@@ -17,22 +18,21 @@ def binary_search min, primes, max, guess, n
     puts "it took you 1 guess to find the prime!"
   else
     until guess == n do
-      if guess > n
-        puts "Lower"
-        p guess = (max + min) / 2
-        max = guess - 1
-        count += 1
-      else
-        puts "Higher"
-        p guess = (max + min) / 2
-        min = guess + 1
-        count += 1
-      end
-      if guess == n
-        break
+        if guess > n
+          puts "Lower"
+          max = guess - 1
+          p guess = (max + min) / 2
+          count += 1
+        elsif guess < n
+          puts "Higher"
+          min = guess + 1
+          p guess = (max + min) / 2
+          count += 1
+        else guess == n
+          break
       end
     end
-      puts "it took you " + count.to_s + " guesses to find the prime!"
+      puts "it took you " + count.to_s + " guesses to find the prime at index " + primes.index(guess).to_s
   end
 end
 
