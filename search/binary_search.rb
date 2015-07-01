@@ -1,6 +1,12 @@
 =begin
 Binary Search Algorithm with random a random guess each time the
 program is run.
+
+Time Complexity:
+  Worst case performance O(log n)
+  Best case performance O(1)
+  Average case performance O(log n)
+  Worst case space complexity 0(1)
 =end
 
 min = 0
