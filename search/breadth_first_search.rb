@@ -2,8 +2,8 @@
 Breadth First Search Algorithm
 
 Time Complexity:
-  Worst case performance  O(|E|) = O(b^d)
-  Worst case space complexity O(|V|) = O(b^d)
+  Worst case performance - O(|E|) = O(b^d)
+  Worst case space complexity - O(|V|) = O(b^d)
 =end
 
 

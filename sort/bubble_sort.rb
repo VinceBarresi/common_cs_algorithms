@@ -3,10 +3,10 @@
   array with random indeces.
   
   Time Complexity:
-    Worst case performance  O(n^2)
-    Best case performance O(n)
-    Average case performance  O(n^2)
-    Worst case space complexity
+    Worst case performance - O(n^2)
+    Best case performance - O(n)
+    Average case performance - O(n^2)
+    Worst case space complexity - O(1) auxiliary
 =end
 
 arr = Array.new
