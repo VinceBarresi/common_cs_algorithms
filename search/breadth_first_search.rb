@@ -6,50 +6,37 @@ Time Complexity:
   Worst case space complexity - O(|V|) = O(b^d)
 =end
 
+require_relative 'node'
 
-queue = Queue.new
+queue = []
 
-graph = Array.new
-
-p graph[],[] = {
-            "0", "0", "0", "0","0", "0", "0", "0"
-            "1", "1", "1", "1","1", "1", "1", "1"
-            "2", "2", "2", "2","2", "2", "2", "2"
-            "3", "3", "3", "3","3", "3", "3", "3"
-        }
-
-source = 0
-
-
+p queue = ["0", "1", "0", "0","1", "0", "1", "0"],
+          ["1", "1", "1", "0","1", "1", "0", "1"],
+          ["0", "1", "0", "0","0", "0", "1", "1"],
+          ["1", "0", "1", "1","0", "1", "0", "1"]
 
 def enqueue queue, obj
-    queue.push(obj)
+  queue.push(obj)
 end
 
-def dequeue
-    queue.shift
+def dequeue queue
+  queue.pop()
 end
 
-def is_empty queue
-    queue.length == 0
-end
+def do_bfs queue
 
-root_node = 0
+  visited = {queue.first => true}
 
-n_nodes = 0
-
-visited == false
-
-def do_bfs graph, source, bfs_info
-    i = 0
-
-    while queue.length != 0
-       dequeue
+  while !queue.empty? do
+    root_node = queue.pop
+    queue.each do |child_node|
+      if visited[child_node] != true
+        puts child_node
+        queue.push(rand(0..1))
+        visited[child_node] = true
+      end
     end
-
-    # bfs_info[source].distance = 0
-
-    # puts bfs_info
+  end
 end
 
-
+do_bfs queue

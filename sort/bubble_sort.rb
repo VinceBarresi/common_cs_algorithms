@@ -33,7 +33,7 @@ def bubble_sort arr, arr_size
   i = 0
   swapped = ''
   while swapped do 
-    swapped = false
+   swapped = false
     (arr_size - 1).times do |i|
       if arr[i] > arr[i + 1]
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
