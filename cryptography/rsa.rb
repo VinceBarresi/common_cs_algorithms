@@ -1,5 +1,5 @@
 =begin
-  Rivest Shamir Adelman (RSA) Algorithm
+  Rivest Shamir Aldeman (RSA) Algorithm
 
   This solution generates m as a random number 
   between 0 and 1000. It then encrypts and decrypts m.
@@ -8,11 +8,11 @@
 require_relative '../math/arithmetic'
 
 def encrypt m, e, n
-  m**e % totient
+  m**e % n
 end
 
 def decrypt c, d, n
-  c**d % totient
+  c**d % n
 end
 
 def gen_e n
@@ -36,7 +36,7 @@ def rsa m
   n, e = (p * q), 0
   puts 'p is ' + p.to_s + ' and q is ' + q.to_s + ' so p*q = n = ' + n.to_s
   totient = (p - 1) * (q - 1)
-  until e > 1 && e < totient && gcd(e, totient) == 1 #&& (totient - e) < 50
+  until e > 1 && e < totient && gcd(e, totient) == 1
     e = prime_generator.sample
   end
   puts 'e is ' + e.to_s
