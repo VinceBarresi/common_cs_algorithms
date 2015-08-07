@@ -10,11 +10,10 @@
     O(log n) auxiliary (Sedgewick 1978)
 =end
 
-arr, i = [], 0
+arr = []
 
-50.times do
+50.times do |i|
   arr[i] = rand(1000)
-  i += 1
 end
 
 puts 'Random Array:  ', "#{arr}"
