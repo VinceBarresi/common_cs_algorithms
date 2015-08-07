@@ -34,19 +34,20 @@ def rsa m
   p = prime_generator.sample
   q = prime_generator.sample
   n, e = (p * q), 0
-  puts 'p is ' + p.to_s + ' and q is ' + q.to_s + ' so p*q = n = ' + n.to_s
+  puts 'p is ' + "#{p}" + ' and q is ' + "#{q}" + ' so p*q = n = ' + "#{n}"
   totient = (p - 1) * (q - 1)
   until e > 1 && e < totient && gcd(e, totient) == 1
     e = prime_generator.sample
   end
-  puts 'e is ' + e.to_s
+  puts 'e is '"#{e}"
   d = gen_d e, totient
-  puts 'd is ' + d.to_s 
+  puts 'd is '"#{d}" 
   c = encrypted = public_key = m**e % totient
+  puts 'c is '"#{c}"
   decrypted = private_key = c**d % totient
-  puts 'm = ' + m.to_s
-  puts 'encrypting m...encrypted m = ' + encrypted.to_s
-  puts 'decrypting m...decrypted m = ' + decrypted.to_s
+  puts 'm = ' + "#{m}"
+  puts 'encrypting m...encrypted m = '"#{encrypted}"
+  puts 'decrypting m...decrypted m = '"#{decrypted}"
 end
 
 rsa rand(1000)
