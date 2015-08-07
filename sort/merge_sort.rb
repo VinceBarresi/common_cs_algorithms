@@ -28,11 +28,7 @@ end
 def merge left, right
   return right if left.empty?
   return left if right.empty?
-  if left.first <= right.first
-    el_to_sort = left.shift
-  else
-    el_to_sort = right.shift
-  end   
+  left.first <= right.first ? el_to_sort = left.shift : el_to_sort = right.shift 
   [el_to_sort] + merge(left, right)
 end
 
