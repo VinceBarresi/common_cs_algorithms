@@ -9,10 +9,9 @@
     Worst case space complexity - O(1) auxiliary
 =end
 
-arr = Array.new
+arr = []
 
-i = 0
-arr_size = rand(10)
+i , arr_size = 0, rand(10)
 
 while i < arr_size
   arr[i] = rand(10)
@@ -22,12 +21,6 @@ end
 puts "\n"
 puts 'unsorted array: '
 p arr
-
-def swap a, b
-  temp = a
-  a = b
-  b = temp
-end
 
 def bubble_sort arr, arr_size
   i = 0
