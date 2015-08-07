@@ -14,8 +14,8 @@ primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67
 n = primes.sample
 max = primes.length - 1
 guess = primes.sample
-puts 'selected prime is ' + n.to_s
-puts 'the first guess is ' + guess.to_s
+puts 'selected prime is '"#{n}"
+puts 'the first guess is '"#{guess}"
 
 def binary_search min, primes, max, guess, n
   count = 0
@@ -38,7 +38,7 @@ def binary_search min, primes, max, guess, n
           break
       end
     end
-      puts 'it took ' + count.to_s + ' guesses to find the prime at index ' + primes.index(guess).to_s
+      puts 'it took '"#{count}"' guesses to find the prime at index ' + "#{primes.index(guess)}"
   end
 end
 
