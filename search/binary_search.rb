@@ -38,7 +38,7 @@ def binary_search min, primes, max, guess, n
           break
       end
     end
-      puts 'it took '"#{count}"' guesses to find the prime at index ' + "#{primes.index(guess)}"
+    puts 'it took '"#{count}"' guesses to find the prime at index '"#{primes.index(guess)}"
   end
 end
 
