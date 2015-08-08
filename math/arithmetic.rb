@@ -1,13 +1,12 @@
 #Arithmetic methods
 
+require 'prime'
+
 def prime_generator
   x, i = rand(1000), 0
   primes = []
   while i < x
-    if i % 2 == 0
-      is_prime = false
-    else
-      is_prime = true
+    if i.prime? == true
       primes[i] = i
     end
     i += 1
