@@ -3,12 +3,9 @@
 require 'prime'
 
 def prime_generator
-  x, i = rand(1000), 0
-  primes = []
+  x, i, primes = rand(1000), 0, []
   while i < x
-    if i.prime? == true
-      primes[i] = i
-    end
+    primes[i] = i if i.prime?
     i += 1
   end
   primes.compact
@@ -27,18 +24,14 @@ end
 def eulers_totient n
   prime_count, a = 0, 1
   while a <= n do
-    if gcd(n , a) == 1
-      prime_count += 1 
-    end      
+    prime_count += 1 if gcd(n , a) == 1
     a += 1
   end
   prime_count
 end
 
 def extended_euclid a, b
-  if a % b == 0
-    return [0, 1]
-  end
+  return [0, 1] if a % b == 0
   x, y = extended_euclid(b, a % b)
   [y, x - y * (a / b)]
 end
