@@ -1,4 +1,4 @@
-#Arithmetic methods
+# Arithmetic methods
 
 require 'prime'
 
