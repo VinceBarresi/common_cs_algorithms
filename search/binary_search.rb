@@ -9,14 +9,6 @@ Time Complexity:
   Worst case space complexity - 0(1)
 =end
 
-min = 0
-primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
-n = primes.sample
-max = primes.length - 1
-guess = primes.sample
-puts 'selected prime is '"#{n}"
-puts 'the first guess is '"#{guess}"
-
 def binary_search min, primes, max, guess, n
   count = 0
   if guess == n 
@@ -41,5 +33,3 @@ def binary_search min, primes, max, guess, n
     puts 'it took '"#{count}"' guesses to find the prime at index '"#{primes.index(guess)}"
   end
 end
-
-binary_search min, primes, max, guess, n
