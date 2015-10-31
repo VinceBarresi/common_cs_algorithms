@@ -9,15 +9,6 @@
     Worst case space complexity - O(1) auxiliary
 =end
 
-arr, arr_size = [], rand(10000)
-
-(arr_size).times do |i|
-  arr[i] = rand(10)
-end
-
-puts "\n"
-puts 'unsorted array: '"#{arr}"
-
 def bubble_sort arr, arr_size
   swapped = ''
   while swapped do 
@@ -32,5 +23,3 @@ def bubble_sort arr, arr_size
   puts "\n"
   puts 'array sorted with bubble sort: '"#{arr}"
 end
-
-bubble_sort arr, arr_size
