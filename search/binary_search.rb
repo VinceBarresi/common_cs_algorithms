@@ -11,9 +11,7 @@ Time Complexity:
 
 def binary_search min, primes, max, guess, n
   count = 0
-  if guess == n 
-    puts 'you guessed right!'
-    puts 'it took 1 guess to find the prime!'
+  puts 'you guessed right! It took 1 guess to find the prime! 'if guess == n 
   else
     until guess == n do
         if guess > n
