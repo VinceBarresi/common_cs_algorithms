@@ -20,6 +20,5 @@ def bubble_sort arr, arr_size
       end
     end
   end
-  puts "\n"
-  puts 'array sorted with bubble sort: '"#{arr}"
+  puts "\n"+'array sorted with bubble sort: '"#{arr}"
 end
