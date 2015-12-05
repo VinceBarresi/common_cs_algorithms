@@ -10,14 +10,6 @@
     O(log n) auxiliary (Sedgewick 1978)
 =end
 
-arr = []
-
-50.times do |i|
-  arr[i] = rand(1000)
-end
-
-puts 'Random Array:  ', "#{arr}"
- 
 # inplace quicksort 
 def quick_sort arr, first, last
   return if first > last
@@ -35,5 +27,3 @@ def quick_sort arr, first, last
   quick_sort arr, left, last
   p arr
 end
-
-quick_sort arr, 0, 49

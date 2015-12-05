@@ -15,4 +15,3 @@ def fibonacci n
   end
 end
 
-fibonacci rand(100)

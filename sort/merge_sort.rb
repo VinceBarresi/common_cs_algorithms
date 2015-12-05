@@ -8,15 +8,6 @@ Time Complexity:
   Worst case space complexity - О(n) total, O(n) auxiliary
 =end
 
-arr, arr_size = [], rand(100)
-
-arr_size.times do |i|
-  arr[i] = rand(100)
-end
-
-puts 'Random Array: '"#{arr}"
-puts "\n"
-
 def merge_sort arr 
   return arr if arr.size <= 1
   middle  = (arr.length / 2).floor
@@ -31,5 +22,3 @@ def merge left, right
   left.first <= right.first ? el_to_sort = left.shift : el_to_sort = right.shift 
   [el_to_sort] + merge(left, right)
 end
-
-merge_sort arr

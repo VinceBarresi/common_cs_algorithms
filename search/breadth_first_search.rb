@@ -8,35 +8,26 @@ Time Complexity:
 
 require_relative 'node'
 
-queue = []
-
-p queue = ["0", "1", "0", "0","1", "0", "1", "0"],
-          ["1", "1", "1", "0","1", "1", "0", "1"],
-          ["0", "1", "0", "0","0", "0", "1", "1"],
-          ["1", "0", "1", "1","0", "1", "0", "1"]
-
-def enqueue queue, obj
-  queue.push(obj)
-end
-
-def dequeue queue
-  queue.pop()
-end
-
-def do_bfs queue
-
-  visited = {queue.first => true}
-
-  while !queue.empty? do
-    root_node = queue.pop
-    queue.each do |child_node|
-      if visited[child_node] != true
-        puts child_node
-        queue.push(rand(0..1))
-        visited[child_node] = true
+class BFS
+  def enqueue queue, obj
+    queue.push(obj)
+  end
+  
+  def dequeue queue
+    queue.pop()
+  end
+  
+  def do_bfs queue
+    visited = {queue.first => true}
+    while !queue.empty? do
+      root_node = queue.pop
+      queue.each do |child_node|
+        if visited[child_node] != true
+          puts child_node
+          queue.push(rand(0..1))
+          visited[child_node] = true
+        end
       end
     end
   end
 end
-
-do_bfs queue
