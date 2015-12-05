@@ -21,16 +21,10 @@ puts 'Random Array:  ', "#{arr}"
 # inplace quicksort 
 def quick_sort arr, first, last
   return if first > last
-  pivot = arr[(first + last) / 2]
-  left = first
-  right = last
+  pivot, left, right = arr[(first + last) / 2], first, last
   while left <= right
-    while arr[left] < pivot
-      left += 1
-    end
-      while arr[right] > pivot
-        right -= 1
-      end
+    left += 1 while arr[left] < pivot
+      right -= 1 while arr[right] > pivot
       if left <= right
         arr[left], arr[right] = arr[right], arr[left]
         left += 1
