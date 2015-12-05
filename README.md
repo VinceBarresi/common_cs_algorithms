@@ -1,10 +1,10 @@
-###Ruby implementation of common algorithms in Computer Science.###
+# Ruby implementation of common algorithms in Computer Science. #
 
-# Cryptography #
+### Cryptography ###
 
 - RSA
 
-# Math #
+### Math ###
 
 - Prime Number Generator
 - Extended Euclidean
@@ -13,12 +13,12 @@
 - Greatest Common Divisor
 - Coprime
 
-# Search #
+### Search ###
 
 - Binary Search
 - Breadth First Search
 
-# Sort #
+### Sort ###
 - Bubble Sort
 - Merge Sort
 - Quick Sort
