@@ -24,9 +24,7 @@ end
 
 def gen_d e, phi
   x, y = extended_euclid(e, phi)
-  if x < 0
-    x += phi
-  end 
+  x += phi if x < 0
   x 
 end
 
